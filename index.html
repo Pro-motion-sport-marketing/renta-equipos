@@ -117,7 +117,7 @@ section{padding:56px 0}
 .specs{display:flex;flex-wrap:wrap;gap:6px}
 .specs span{font-size:12px;background:var(--bg2);border:1px solid var(--line);padding:4px 9px;border-radius:8px;color:#cfd3da}
 .inc{font-size:13px;color:var(--mute)}
-.inc b{color:var(--acc);font-weight:600}
+.inc b{color:#e8eaee;font-weight:600}
 .pricebar{margin-top:auto;display:flex;align-items:end;justify-content:space-between;gap:10px;padding-top:12px;border-top:1px dashed var(--line2)}
 .price b{font-family:"Barlow Condensed";font-size:42px;line-height:.9}
 .price small{display:block;font-size:12px;color:var(--mute)}
@@ -217,6 +217,8 @@ footer img{height:44px;width:auto;opacity:.9}
 .modal.on{opacity:1;pointer-events:auto}
 .mbox{background:var(--bg2);border:1px solid var(--line2);border-radius:24px;max-width:880px;width:100%;max-height:92vh;overflow:auto;display:grid;grid-template-columns:1fr 1fr;position:relative;transform:scale(.96);transition:transform .35s var(--ease)}
 .modal.on .mbox{transform:none}
+.mscrim{position:absolute;inset:0;background:rgba(0,0,0,.72);z-index:1}
+.mbox{z-index:2}
 .mgal{background:#fff;display:flex;flex-direction:column;justify-content:center;padding:18px;gap:10px;min-height:320px}
 .mgal .main{flex:1;display:grid;place-items:center}
 .mgal .main img{max-height:420px;object-fit:contain}
@@ -364,7 +366,7 @@ footer img{height:44px;width:auto;opacity:.9}
   </div>
 </aside>
 
-<div class="modal" id="modal"><div class="scrim on" data-close style="position:absolute"></div><div class="mbox" id="mbox"></div></div>
+<div class="modal" id="modal"><div class="mscrim" data-close></div><div class="mbox" id="mbox"></div></div>
 <div class="toast" id="toast"></div>
 
 <script>
